@@ -4,7 +4,7 @@ import Card from "../components/Card.astro";
 import { getEvents } from "../lib/airtable";
 
 const events  = await getEvents();
-
+console.log(events)
 ---
 
 <Layout title="Welcome to Astro.">
@@ -15,7 +15,6 @@ const events  = await getEvents();
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
 		<ul role="list" class="link-card-grid">
-			{events.map((event) => <li><pre>{JSON.stringify(event, null, '\t')}</pre></li> )}
 			<Card
 				href="https://docs.astro.build/"
 				title="Documentation"
