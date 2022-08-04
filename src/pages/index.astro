@@ -1,10 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import { getEvents } from "../lib/airtabletest.js";
+import { getEvents } from "../lib/airtable";
 
-const test  = getEvents();
-console.log(test);
+const events  = await getEvents();
+console.log(events)
 ---
 
 <Layout title="Welcome to Astro.">
